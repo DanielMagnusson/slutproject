@@ -3,9 +3,8 @@
 }
 
 .slideshows {
-  width: 100%;
   display: flex;
-  margin-top: 10%;
+  margin-top: 100px;
 }
 
 /* Slideshow container */
@@ -13,6 +12,7 @@
   position: relative;
   margin: auto;
   width: 30%;
+  margin-top: 10px;
 }
 
 img {
@@ -123,4 +123,22 @@ footer h3 {
 
 footer li {
     margin-left: 10px;
+}
+
+@media (max-width: 750px) {
+  .slideshow-container {
+    width: 45%;
+  }
+  .slideshows {
+    flex-wrap: wrap;
+  }
+  .right {
+    width: 80%;
+  }
+
+}
+@media (max-width: 500px) {
+  .slideshow-container {
+    width: 80%;
+  }
 }

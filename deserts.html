@@ -11,30 +11,30 @@
 <body class="bodyblack">
     <header>
         <nav class="navbar">
-            <a href="main.html"><h1 class="brand">Back</h1></a>
+            <a href="main.html"><h1 class="brand">Menu</h1></a>
             <ul>
                 <li><a href="https://www.mcdonalds.com/se/sv-se/restaurant-locator.html">Order to store</a></li>
-                <li><a href="">Daily Deals</a></li>
-                <li><a id="openBtn">Login/Signup</a></li>
+                <li><a href="deals.html">Daily Deals</a></li>
+                <li><button class="open-button" onclick="openForm()">Login/Signup</button></li>
             </ul>
         </nav>
     </header>
-    <div id="popup">
-        <div id="popup-login">
-            <h2>Logga in / Skapa konto</h2>
-            <form>
-                <label for="username">Användarnamn:</label>
-                <input type="text" id="username" name="username"><br><br>
-                <label for="password">Lösenord:</label>
-                <input type="password" id="password" name="password"><br><br>
-                <input type="submit" value="Logga in">
-                <input type="submit" value="Skapa konto">
-            </form>
-            <button id="closeBtn">Stäng</button>
-        </div>
+    <div class="form-popup" id="myForm">
+        <form class="form-container" onsubmit="return validateForm()">
+          <h1>Login/Signup</h1>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+          <button type="submit" class="btn" id="login-btn">Login</button>
+          <button type="button" class="btn" id="signup-btn">Signup</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
     </div>
 	<div class="slideshows">
-		<div class="slideshow-container">
+		<div class="slideshow-container left">
 			<div class="mySlides1 fade">
 				<img src="https://s7d1.scene7.com/is/image/mcdonalds/mcd-sv-products-accessories-french-fries-mellan:product-header-desktop?wid=829&hei=455&dpr=off" style="width:100%">
 				<div class="text black">Fries</div>
@@ -54,7 +54,7 @@
             <a class="next nextblack" onclick="plusSlides(1, 1)">&#10095;</a>
         </div>
     
-        <div class="slideshow-container">
+        <div class="slideshow-container middle">
             <div class="mySlides2 fade">
                 <img src="https://s7d1.scene7.com/is/image/mcdonalds/mcd-sv-products-desserts-mcflurry-cookiesncream:product-header-desktop?wid=829&hei=455&dpr=off" style="width:100%">
                 <div class="text black">McFlurry</div>
@@ -75,7 +75,7 @@
             <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
         </div>
     
-        <div class="slideshow-container">
+        <div class="slideshow-container right">
             <div class="mySlides3 fade">
 				<a href="main.html"><img src="https://s7d1.scene7.com/is/image/mcdonalds/mcd-sv-products-drinks-milkshake-vanilla:product-header-desktop?wid=829&hei=455&dpr=off" style="width:100%"></img></a>
 				<div class="text black">Milkshake</div>

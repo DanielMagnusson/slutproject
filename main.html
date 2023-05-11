@@ -14,24 +14,24 @@
             <ul>
                 <li><a href="https://www.mcdonalds.com/se/sv-se/restaurant-locator.html">Order to store</a></li>
                 <li><a href="deals.html">Daily Deals</a></li>
-                <li><a id="openBtn">Login/Signup</a></li>
+                <li><button class="open-button" onclick="openForm()">Login/Signup</button></li>
             </ul>
         </nav>
     </header>
-    <div id="popup">
-        <div id="popup-login">
-            <h2>Logga in / Skapa konto</h2>
-            <form>
-                <label for="username">Användarnamn:</label>
-                <input type="text" id="username" name="username"><br><br>
-                <label for="password">Lösenord:</label>
-                <input type="password" id="password" name="password"><br><br>
-                <input class="knapp" type="submit" value="Logga in">
-                <input class="knapp" type="submit" value="Skapa konto">
-            </form>
-            <button class="knapp" id="closeBtn">Stäng</button>
-        </div>
-    </div>
+      <div class="form-popup" id="myForm">
+        <form class="form-container" onsubmit="return validateForm()">
+          <h1>Login/Signup</h1>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+          <button type="submit" class="btn" id="login-btn">Login</button>
+          <button type="button" class="btn" id="signup-btn">Signup</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
     <div class="menu">
 		<a class="flexbox" id="hamburgers" href="hamburgers.html">
 			<h2>Hamburgers</h2>
@@ -45,7 +45,7 @@
 			<div class="item">Nuggets</div>
             <div class="item">Veggie</div>
         </a>
-		<a class="flexbox" id="veggie" href="deserts.html">
+		<a class="flexbox" id="deserts" href="deserts.html">
 			<h2>Fries/Deserts</h2>
 			<div class="item">fries</div>
 			<div class="item">Icecream</div>

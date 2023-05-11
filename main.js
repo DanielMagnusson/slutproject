@@ -1,14 +1,65 @@
-const openBtn = document.getElementById('openBtn');
-const closeBtn = document.getElementById('closeBtn');
-const popup = document.getElementById('popup');
+// Sparar användarnamn och lösenord som variabler
+let savedUsername;
+let savedPassword;
 
-openBtn.addEventListener('click', function() {
-  popup.classList.add('show');
-});
+// Öppnar popup-fönstret
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
 
-closeBtn.addEventListener('click', function() {
-  popup.classList.remove('show');
-});
+// Stänger popup-fönstret
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+// Validerar formuläret
+function validateForm() {
+  let email = document.getElementById("email").value;
+  let psw = document.getElementById("psw").value;
+
+  if (email === "" || psw === "") {
+    alert("Du måste fylla i både e-post och lösenord!");
+    return false;
+  }
+
+  return true;
+}
+
+// Registrerar en användare
+function signup() {
+  let email = document.getElementById("email").value;
+  let psw = document.getElementById("psw").value;
+
+  if (email === "" || psw === "") {
+    alert("Du måste fylla i både e-post och lösenord!");
+  } else {
+    alert("Du har registrerat dig!");
+    savedUsername = email;
+    savedPassword = psw;
+  }
+
+  
+}
+
+// Loggar in användaren
+function login() {
+  let email = document.getElementById("email").value;
+  let psw = document.getElementById("psw").value;
+
+  if (email === savedUsername && psw === savedPassword) {
+    alert("Du är nu inloggad!");
+    closeForm();
+  } else {
+    alert("Felaktigt e-post eller lösenord. Vänligen försök igen.");
+  }
+}
+
+// Lyssnare för signup-knappen
+document.getElementById("signup-btn").addEventListener("click", signup);
+
+// Lyssnare för login-knappen
+document.getElementById("login-btn").addEventListener("click", login);
+
 
 // Slideshow 1
 var slideIndex1 = 1;
@@ -45,7 +96,7 @@ function showSlides1(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex1 - 1].style.display = "block";
+  slides[slideIndex1 - 1].style.display = "flex";
 }
 
 function showSlides2(n) {
@@ -60,7 +111,7 @@ function showSlides2(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex2 - 1].style.display = "block";
+  slides[slideIndex2 - 1].style.display = "flex";
 }
 
 function showSlides3(n) {
@@ -75,6 +126,6 @@ function showSlides3(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex3 - 1].style.display = "block";
+  slides[slideIndex3 - 1].style.display = "flex";
 }
 
