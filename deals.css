@@ -1,0 +1,32 @@
+.table-container {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+  }
+  
+  thead {
+    background-color: lightgray;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tfoot {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  

@@ -13,11 +13,25 @@
             <h1 class="brand">McDelivery</h1>
             <ul>
                 <li><a href="https://www.mcdonalds.com/se/sv-se/restaurant-locator.html">Order to store</a></li>
-                <li><a href="">Daily Deals</a></li>
-                <li><a href="">Info</a></li>
+                <li><a href="deals.html">Daily Deals</a></li>
+                <li><a id="openBtn">Login/Signup</a></li>
             </ul>
         </nav>
     </header>
+    <div id="popup">
+        <div id="popup-login">
+            <h2>Logga in / Skapa konto</h2>
+            <form>
+                <label for="username">Användarnamn:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Lösenord:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <input class="knapp" type="submit" value="Logga in">
+                <input class="knapp" type="submit" value="Skapa konto">
+            </form>
+            <button class="knapp" id="closeBtn">Stäng</button>
+        </div>
+    </div>
     <div class="menu">
 		<a class="flexbox" id="hamburgers" href="hamburgers.html">
 			<h2>Hamburgers</h2>
@@ -25,19 +39,19 @@
 			<div class="item">Chicken</div>
 			<div class="item">Kids</div>
         </a>
-		<a class="flexbox" id="sallads" href="sallads.html">
-			<h2>Sallads/nuggets</h2>
+		<a class="flexbox" id="sallads" href="mixed.html">
+			<h2>Sallads/Chicken</h2>
 			<div class="item">Chicken sallads</div>
 			<div class="item">Nuggets</div>
+            <div class="item">Veggie</div>
         </a>
-		<a class="flexbox" id="veggie" href="veggie.html">
-			<h2>Veggie</h2>
-			<div class="item">Veggie Sallads</div>
-			<div class="item">Veggie Burgers</div>
+		<a class="flexbox" id="veggie" href="deserts.html">
+			<h2>Fries/Deserts</h2>
+			<div class="item">fries</div>
+			<div class="item">Icecream</div>
+            <div class="item">Milkshake</div>
         </a>
 	</div>
-    <div class="info">
-
-    </div>
+    <script src="main.js"></script>
 </body>
 </html>
