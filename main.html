@@ -1,57 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>McDelivery</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css\main.css" />
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <h1 class="brand">McDelivery</h1>
-            <ul>
-                <li><a href="https://www.mcdonalds.com/se/sv-se/restaurant-locator.html">Order to store</a></li>
-                <li><a href="deals.html">Daily Deals</a></li>
-                <li><button class="open-button" onclick="openForm()">Login/Signup</button></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <h1 class="brand">McDelivery</h1>
+        <ul>
+          <li>
+            <button
+              class="open-popup-btn"
+              id="mapButton"
+              onclick="togglePopup()"
+            >
+              Order to Store
+            </button>
+          </li>
+          <li><a href="deals.html">Daily Deals</a></li>
+          <li>
+            <button class="open-button" onclick="openForm()">
+              Login/Signup
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
-      <div class="form-popup" id="myForm">
-        <form class="form-container" onsubmit="return validateForm()">
-          <h1>Login/Signup</h1>
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <main>
+      <section>
+        <div class="form-popup" id="myForm">
+          <form class="form-container" onsubmit="return validateForm()">
+            <h1>Login/Signup</h1>
+            <label for="email"><b>Email</b></label>
+            <input
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              id="email"
+              required
+            />
 
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              id="psw"
+              required
+            />
 
-          <button type="submit" class="btn" id="login-btn">Login</button>
-          <button type="button" class="btn" id="signup-btn">Signup</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        </form>
-      </div>
-    <div class="menu">
-		<a class="flexbox" id="hamburgers" href="hamburgers.html">
-			<h2>Hamburgers</h2>
-			<div class="item">Meat</div>
-			<div class="item">Chicken</div>
-			<div class="item">Kids</div>
-        </a>
-		<a class="flexbox" id="sallads" href="mixed.html">
-			<h2>Sallads/Chicken</h2>
-			<div class="item">Chicken sallads</div>
-			<div class="item">Nuggets</div>
+            <button type="submit" class="btn" id="login-btn">Login</button>
+            <button type="button" class="btn" id="signup-btn">Signup</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">
+              Close
+            </button>
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="popup-wrapper" id="popup">
+          <div class="popup-content">
+            <h2 id="popupTitle"></h2>
+            <p id="popupText"></p>
+            <button class="close-popup-btn" onclick="closePopup()">
+              Close
+            </button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="menu">
+          <a class="flexbox" id="hamburgers" href="hamburgers.html">
+            <h2>Hamburgers</h2>
+            <div class="item">Meat</div>
+            <div class="item">Chicken</div>
+            <div class="item">Kids</div>
+          </a>
+          <a class="flexbox" id="sallads" href="mixed.html">
+            <h2>Sallads/Chicken</h2>
+            <div class="item">Chicken sallads</div>
+            <div class="item">Nuggets</div>
             <div class="item">Veggie</div>
-        </a>
-		<a class="flexbox" id="deserts" href="deserts.html">
-			<h2>Fries/Deserts</h2>
-			<div class="item">fries</div>
-			<div class="item">Icecream</div>
+          </a>
+          <a class="flexbox" id="deserts" href="deserts.html">
+            <h2>Fries/Deserts</h2>
+            <div class="item">fries</div>
+            <div class="item">Icecream</div>
             <div class="item">Milkshake</div>
-        </a>
-	</div>
-    <script src="main.js"></script>
-</body>
+          </a>
+        </div>
+      </section>
+    </main>
+    <script src="javascript/main.js"></script>
+  </body>
 </html>

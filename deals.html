@@ -1,98 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="deals.css">
-    <link rel="stylesheet" href="main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/deals.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <a href="main.html"><h1 class="brand">Menu</h1></a>
-            <ul>
-                <li><a href="https://www.mcdonalds.com/se/sv-se/restaurant-locator.html">Order to store</a></li>
-                <li><a href="">Daily Deals</a></li>
-                <li><button class="open-button" onclick="openForm()">Login/Signup</button></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <a href="main.html"><h1 class="brand">Menu</h1></a>
+        <ul>
+          <li><a href="">Daily Deals</a></li>
+          <li>
+            <button class="open-button" onclick="openForm()">
+              Login/Signup
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <div class="form-popup" id="myForm">
-        <form class="form-container" onsubmit="return validateForm()">
-          <h1>Login/Signup</h1>
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" id="email" required>
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-          <button type="submit" class="btn" id="login-btn">Login</button>
-          <button type="button" class="btn" id="signup-btn">Signup</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        </form>
-    </div>
-    <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Måndag</th>
-              <th>Tisdag</th>
-              <th>Onsdag</th>
-              <th>Torsdag</th>
-              <th>Fredag</th>
-              <th>Lördag</th>
-              <th>Söndag</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Rad 1</td>
-              <td>Cell 1</td>
-              <td>Cell 2</td>
-              <td>Cell 3</td>
-              <td>Cell 4</td>
-              <td>Cell 5</td>
-              <td>Cell 6</td>
-              <td>Cell 7</td>
-            </tr>
-            <tr>
-              <td>Rad 2</td>
-              <td>Cell 1</td>
-              <td>Cell 2</td>
-              <td>Cell 3</td>
-              <td>Cell 4</td>
-              <td>Cell 5</td>
-              <td>Cell 6</td>
-              <td>Cell 7</td>
-            </tr>
-            <tr>
-              <td>Rad 3</td>
-              <td>Cell 1</td>
-              <td>Cell 2</td>
-              <td>Cell 3</td>
-              <td>Cell 4</td>
-              <td>Cell 5</td>
-              <td>Cell 6</td>
-              <td>Cell 7</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>Rad 4</td>
-              <td>Cell 1</td>
-              <td>Cell 2</td>
-              <td>Cell 3</td>
-              <td>Cell 4</td>
-              <td>Cell 5</td>
-              <td>Cell 6</td>
-              <td>Cell 7</td>
-            </tr>
-          </tfoot>
-        </table>
-    </div>
-    <script src="main.js"></script>
-</body>
+    <main>
+      <section>
+        <div class="form-popup" id="myForm">
+          <form class="form-container" onsubmit="return validateForm()">
+            <h1>Login/Signup</h1>
+            <label for="email"><b>Email</b></label>
+            <input
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              id="email"
+              required
+            />
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              id="psw"
+              required
+            />
+            <button type="submit" class="btn" id="login-btn">Login</button>
+            <button type="button" class="btn" id="signup-btn">Signup</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">
+              Close
+            </button>
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Discounts</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thorsday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-5kr</td>
+                <td>QP cheese</td>
+                <td>Chicken Burger Salsa</td>
+                <td>McChicken</td>
+                <td>Tasty Cheese</td>
+                <td>Icecream</td>
+                <td>Chicken Burger Salsa</td>
+                <td>QP cheese</td>
+              </tr>
+              <tr>
+                <td>-10kr</td>
+                <td>Dubble QP</td>
+                <td>Nuggets</td>
+                <td>Spicy Nuggets</td>
+                <td>Shake Deluxe</td>
+                <td>Nuggets</td>
+                <td>Dubble QP</td>
+                <td>Spicy Nuggets</td>
+              </tr>
+              <tr>
+                <td>-15kr</td>
+                <td>McSelection Big Tasty Bacon</td>
+                <td>McSelection Tennessee BBQ</td>
+                <td>McSelection Big Tasty</td>
+                <td>Chicken Tasty</td>
+                <td>Veggie Tasty</td>
+                <td>Sallad Mango-Chicken</td>
+                <td>McSelection Big Tasty</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>2 for 1</td>
+                <td>Fries</td>
+                <td>Coffe</td>
+                <td>Sundea</td>
+                <td>Hotwings</td>
+                <td>Chili Cheese</td>
+                <td>Milkshake</td>
+                <td>McFlurry</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="javascript/main.js"></script>
+  </body>
 </html>

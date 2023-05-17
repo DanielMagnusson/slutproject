@@ -155,6 +155,28 @@ ul li a{
   opacity: 0.8;
 }
 
+.popup-wrapper {
+  display: none;
+  margin-top: 60px;
+}
+
+.popup-content {
+  background-color: #f9f9f9;
+  padding: 10px;
+  text-align: center;
+}
+
+.close-popup-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  margin-top: 10px;
+}
+
+
 
 @media (max-width: 1200px) {
   .flexbox {
